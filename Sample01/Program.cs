@@ -54,6 +54,13 @@ namespace Sample01
             Console.ReadLine();
             Console.Clear();
 
+            Console.WriteLine("Ваш вес?(укажите в кг)");
+            weight = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Clear();
+
+            Console.WriteLine($"Индекс массы тела: {weight / (height / 100 * height / 100):F2}");
+            Console.ReadLine();
+            Console.Clear();
             #endregion
 
             #region Задание №3-A
