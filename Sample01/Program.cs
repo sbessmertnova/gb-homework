@@ -49,18 +49,11 @@ namespace Sample01
 
             #region Задание №2
             //Ввести вес и рост человека. Рассчитать и вывести индекс массы тела (ИМТ) по формуле I=m/(h*h); где m — масса тела в килограммах, h — рост в метрах.
-
-            Console.WriteLine("Ваш рост?(укажите в см)");
-            height = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Clear();
-
-            Console.WriteLine("Ваш вес?(укажите в кг)");
-            weight = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Clear();
-
-            Console.WriteLine($"Индекс массы тела: {weight / (height / 100 * height / 100):F2}");
+            var bmi = HelperMethods.CalculateBodyMassIndex();
+            Console.WriteLine($"Индекс массы тела: {bmi:F2}");
             Console.ReadLine();
             Console.Clear();
+
             #endregion
 
             #region Задание №3-A
